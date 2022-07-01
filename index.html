@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Essay Grader</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <h1>Essay Grader</h1>  
+    <form action="http://localhost:3000/" method="post">
+        <ul>
+         <li>
+           <label for="name">Name:</label>
+           <input type="text" id="name" name="user_name">
+         </li>
+         <li>
+           <label for="msg">Essay:</label>
+           <textarea id="msg" name="user_message"></textarea>
+         </li>
+        </ul>
+        <input type="submit" value="Submit">
+       </form>
+	
+  </body>
+</html>
