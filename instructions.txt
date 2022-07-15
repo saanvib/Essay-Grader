@@ -17,4 +17,3 @@ You will be tasked with making a website for Mr. Adam's use. We've divided this 
 5 (BONUS). Implement an administrative page for Mr. Adams (you can host this at localhost:2020/admin). This should show him the scores each student receives for the essay. Use MongoDB to store the grades. He's only concerned with the grades and doesn't care about the content of the essays.
 Mr. Adams trusts his students, so you do not need to build any sort of authentication (fun fact: we like to call this HarkerDev NoAuth, a form of authentication invented by @Neil and @Ryanan where “you dont check people's identity, you assume that they follow the Honor Code and are who they claim to be“).
 Try to accomplish at least two of these mini-parts
-@recruits
