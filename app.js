@@ -24,11 +24,8 @@ async function loadwords() {
     input: fileStream,
     crlfDelay: Infinity
   });
-  // Note: we use the crlfDelay option to recognize all instances of CR LF
-  // ('\r\n') in input.txt as a single line break.
 
   for await (const line of rl) {
-    // Each line in input.txt will be successively available here as `line`.
     all_words.add(line.trim());
         count++;
   }
@@ -38,7 +35,6 @@ async function loadwords() {
 
 loadwords();
 
-// const full_essay = "What is computational 'off. gots! It is to get gotten for ? ab out! has been  getting above;";
 const bodyParser = require('body-parser');
 const { start } = require('repl');
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -63,11 +59,9 @@ app.post('/submit', async (req, res) => {
     grade = 100;
     grade_essay(full_essay);
     console.log(grade);
-    // save in database
     try {
         const database = client.db("grade_db");
         const grades = database.collection("grades");
-        // create a document to insert
         const doc = {
           name: student_name,
           score: grade,
@@ -102,7 +96,7 @@ app.get('/getgrades', async (req,res) => {
       } catch (error) {
         res.json({ message: error });
       }
-    //   console.log(allgrades);
+    console.log(JSON.stringify(allgrades));
     res.json(returnObj);
       // res.send(allgrades);
 })
